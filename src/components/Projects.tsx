@@ -1,0 +1,167 @@
+import React, { useState } from 'react';
+import { Github, ExternalLink, Code2, ChevronDown } from 'lucide-react';
+
+// Images
+import healthhub from "../assets/Healthhub.png";
+import springImage from "../assets/SpringBoot.jpg";
+import Facebook from '../assets/facebook.png';
+import Home from "../assets/crypto.jpg";
+import Buycom from "../assets/buycom.png";
+import estateflow from "../assets/estateflow.png";
+import ceasefiretech from "../assets/ceasefiretech.png";
+
+const projects = [
+  {
+    title: "HealthHub – Healthcare System",
+    image: healthhub,
+    description: "A modern and interactive platform for managing healthcare services, appointments, and patient information.",
+    stack: ["React", "Spring Boot", "MongoDB", "CSS"],
+    demoUrl: "https://health-care-systems-nine.vercel.app/",
+    codeUrl: "https://github.com/NodStan/HealthCareSystems",
+  },
+  {
+    title: "Estate Flow",
+    image: estateflow,
+    description: "EstateFlow is a sleek, modern real-estate web application designed to help users browse, filter, and explore properties with a smooth and intuitive experience.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://real-estate-ashen-gamma.vercel.app/",
+    codeUrl: "https://github.com/Nodstan/RealEstate.git",
+  },
+  {
+    title: "Cease Fire Tech",
+    image: ceasefiretech,
+    description: "A fire safety platform providing reliable, high-quality firefighting equipment and safety solutions through timely supply, professional installation, and continuous support to keep clients prepared, compliant, and safe.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://ceasefiretech.vercel.app/",
+    codeUrl: "https://github.com/Nodstan/CeaseFireTech.git",
+  },
+  {
+    title: "BuyCom",
+    image: Buycom,
+    description: "A modern eCommerce web application built with React, featuring product browsing, dynamic product pages, categories, cart system, responsive UI, and EmailJS-powered newsletter subscription.",
+    stack: ["React", "JavaScript", "CSS", "Express.js"],
+    demoUrl: "https://buycom-frontend.vercel.app/",
+    codeUrl: "https://github.com/Nodstan/BuyCom.git",
+  },
+  {
+    title: "Facebook Clone",
+    image: Facebook,
+    description: "A social media platform where users can create profiles, share posts, connect with friends, and engage through likes, comments, and messages.",
+    stack: ["HTML", "JavaScript", "CSS"],
+    demoUrl: "https://facetextbook.pages.dev/",
+    codeUrl: "https://github.com/Nodstan/Facebook.git",
+  },
+  {
+    title: "Nutrition Guide",
+    image: springImage,
+    description: "A web application that provides personalized nutrition plans and dietary recommendations.",
+    stack: ["Spring Boot", "MongoDB"],
+    demoUrl: "https://nutritional-guide.onrender.com",
+    codeUrl: "https://github.com/Nodstan/NutritionGuide",
+  },
+  {
+    title: "Mood Tracker",
+    image: springImage,
+    description: "A Spring Boot application for tracking daily mood and overall emotional wellness.",
+    stack: ["Spring Boot", "MongoDB"],
+    demoUrl: "https://mood-tracker-1zvf.onrender.com",
+    codeUrl: "https://github.com/emannnx/Mood-Tracker",
+  },
+  {
+    title: "CryptoDo",
+    image: Home,
+    description: "A modern crypto platform that delivers real-time prices, market insights, secure wallet monitoring, and seamless tracking of all your digital assets.",
+    stack: ["React", "CSS", "Express.js", "JavaScript"],
+    demoUrl: "#", // Coming soon
+    codeUrl: "https://github.com/Nodstan/BuyCom.git",
+  }
+];
+
+export default function Projects() {
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  const showMoreProjects = () => {
+    setVisibleCount(prev => Math.min(prev + 3, projects.length));
+  };
+
+  const showLessProjects = () => {
+    setVisibleCount(prev => Math.max(prev - 3, 3));
+  };
+
+  return (
+    <div className="space-y-12 w-full max-w-full">
+      <div className="flex flex-col gap-4">
+        <h2 className="text-3xl font-bold text-slate-50">Featured Projects</h2>
+        <div className="h-1 w-20 bg-emerald-500 rounded-full"></div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-full">
+        {projects.slice(0, visibleCount).map((project) => (
+          <div key={project.title} className="glass-panel rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 group flex flex-col h-full">
+            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="block h-48 overflow-hidden relative bg-slate-900 cursor-pointer">
+               {project.image ? (
+                 <img 
+                   src={project.image} 
+                   alt={project.title} 
+                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 />
+               ) : (
+                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center group-hover:from-slate-800 group-hover:to-slate-700 transition-colors">
+                    <Code2 size={48} className="text-slate-500 group-hover:text-emerald-400 transition-colors" />
+                 </div>
+               )}
+            </a>
+            
+            <div className="p-6 flex flex-col flex-grow">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-semibold text-slate-50 group-hover:text-emerald-400 transition-colors">
+                  {project.title}
+                </h3>
+                <div className="flex gap-2">
+                  <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400" title="View Source on GitHub">
+                    <Github size={20} />
+                  </a>
+                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400" title="View Live Demo">
+                    <ExternalLink size={20} />
+                  </a>
+                </div>
+              </div>
+              <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.stack.map((tech) => (
+                  <span key={tech} className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900/60 text-slate-300 border border-slate-700">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center mt-12 gap-4">
+        {visibleCount < projects.length && (
+          <button 
+            onClick={showMoreProjects}
+            className="group flex items-center gap-2 px-6 py-3 bg-emerald-500/10 text-emerald-300 font-medium rounded-full shadow-none hover:bg-emerald-500/20 hover:text-emerald-200 transition-all duration-300 border border-emerald-500/40"
+          >
+            Show More Projects
+            <ChevronDown size={20} className="group-hover:translate-y-1 transition-transform" />
+          </button>
+        )}
+        
+        {visibleCount > 3 && (
+          <button 
+            onClick={showLessProjects}
+            className="group flex items-center gap-2 px-6 py-3 bg-emerald-500/10 text-emerald-300 font-medium rounded-full shadow-none hover:bg-emerald-500/20 hover:text-emerald-200 transition-all duration-300 border border-emerald-500/40"
+          >
+            Show Less Projects
+            <ChevronDown size={20} className="group-hover:-translate-y-1 transition-transform rotate-180" />
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
