@@ -1,8 +1,9 @@
 import React from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
+import WhyHireMe from './components/WhyHireMe';
 import Skills from './components/Skills';
 import TechnologyStack from './components/TechnologyStack';
 import GithubCalendar from './components/GithubCalendar';
@@ -46,7 +47,7 @@ function Footer() {
               className="p-2 text-slate-500 hover:text-emerald-300 transition-colors"
               aria-label="GitHub"
             >
-              <Github size={18} />
+              <FaGithub size={18} />
             </a>
             <a
               href="https://www.linkedin.com/in/stanley-obitunwase-a11668308/"
@@ -55,7 +56,7 @@ function Footer() {
               className="p-2 text-slate-500 hover:text-emerald-300 transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={18} />
+              <FaLinkedin size={18} />
             </a>
             {/* <a
               href="https://twitter.com"
@@ -64,7 +65,7 @@ function Footer() {
               className="p-2 text-slate-500 hover:text-emerald-300 transition-colors"
               aria-label="Twitter / X"
             >
-              <Twitter size={18} />
+              <FaTwitter size={18} />
             </a> */}
           </div>
         </nav>
@@ -78,7 +79,7 @@ export default function App() {
     <div className="min-h-screen relative overflow-x-hidden max-w-full selection:bg-emerald-500/20 flex flex-col">
       <section
         id="home"
-        className="overflow-x-hidden w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+        className="w-full mx-auto max-w-[90rem]"
       >
         <Hero />
       </section>
@@ -125,6 +126,13 @@ export default function App() {
           className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
         >
           <Certificates />
+        </section>
+
+        <section
+          id="why-hire-me"
+          className="scroll-mt-28 w-full mx-auto max-w-[90rem]"
+        >
+          <WhyHireMe />
         </section>
 
         <section

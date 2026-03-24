@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import jiraLogo from '../assets/jira.png';
 import nodeLogo from '../assets/nodejs.png';
+import koyebLogo from '../assets/koyeb.svg';
 
 const techNodes = [
   // Left loop of the infinity shape
@@ -30,6 +31,7 @@ const techNodes = [
   { label: 'Docker', icon: Container, position: 'md:absolute md:top-[50%] md:left-1/2 md:-translate-x-1/2' },
   { label: 'Jira', icon: Hexagon, position: 'md:absolute md:top-[38%] md:left-1/2 md:-translate-x-1/2' },
   { label: 'Jenkins', icon: Cpu, position: 'md:absolute md:top-[62%] md:left-1/2 md:-translate-x-1/2' },
+  { label: 'Koyeb', icon: Cpu, position: 'md:absolute md:top-[26%] md:left-1/2 md:-translate-x-1/2' },
 ];
 
 export default function TechnologyStack() {
@@ -37,7 +39,7 @@ export default function TechnologyStack() {
     <section className="relative w-full max-w-full overflow-x-hidden">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-500/5 via-transparent to-sky-500/5" />
 
-      <div className="relative max-w-6xl mx-auto space-y-10 w-full max-w-full">
+      <div className="relative max-w-6xl mx-auto space-y-10 w-full">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold text-slate-50">
             Technology <span className="text-emerald-400">Stack</span>
@@ -48,7 +50,7 @@ export default function TechnologyStack() {
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto w-full max-w-full">
+        <div className="relative max-w-5xl mx-auto w-full">
           <div className="mx-auto flex flex-wrap items-center justify-center gap-4 md:block md:h-[600px] md:relative max-w-full">
             {techNodes.map((node) => {
               const Icon = node.icon;
@@ -92,8 +94,6 @@ export default function TechnologyStack() {
                         height="24"
                         viewBox="0 0 640 512"
                         fill="currentColor"
-                        stroke="currentColor"
-                        strokeWidth="0"
                         className="text-xl md:text-2xl group-hover:scale-110 transition-transform duration-300 text-orange-400"
                       >
                         <title>AWS</title>
@@ -187,6 +187,14 @@ export default function TechnologyStack() {
                       <img
                         src={nodeLogo}
                         alt="Node.js"
+                        className="h-6 w-6 object-contain group-hover:scale-110 transition-transform duration-300"
+                        width={24}
+                        height={24}
+                      />
+                    ) : node.label === 'Koyeb' ? (
+                      <img
+                        src={koyebLogo}
+                        alt="Koyeb"
                         className="h-6 w-6 object-contain group-hover:scale-110 transition-transform duration-300"
                         width={24}
                         height={24}

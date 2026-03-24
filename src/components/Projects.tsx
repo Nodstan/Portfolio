@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, Code2, ChevronDown } from 'lucide-react';
+import { ExternalLink, Code2, ChevronDown } from 'lucide-react';
 
 // Images
 import healthhub from "../assets/Healthhub.png";
@@ -9,15 +9,45 @@ import Home from "../assets/crypto.jpg";
 import Buycom from "../assets/buycom.png";
 import estateflow from "../assets/estateflow.png";
 import ceasefiretech from "../assets/ceasefiretech.png";
+import tresbontech from "../assets/tresbontech.png"
+import hogarHomes from "../assets/hogarHomes.png"
+import leadTutors from "../assets/leadTutors.png"
 
 const projects = [
+  {
+    title: "Cease Fire Tech",
+    image: ceasefiretech,
+    description: "A fire safety platform providing reliable, high-quality firefighting equipment and safety solutions through timely supply, professional installation, and continuous support to keep clients prepared, compliant, and safe.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://ceasefiretech.vercel.app/",
+  },
+  {
+    title: "Tresbontech",
+    image: tresbontech,
+    description: "Tresbontech bridges the gap between potential and achievement. Through our Academy and Studio divisions, we deliver world-class education and cutting-edge digital solutions.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://tresbontech.vercel.app/",
+  },
+  {
+    title: "Hogar Homes",
+    image: hogarHomes,
+    description: "Hogar Homes provide strategic real estate solutions designed to help individuals and businesses build wealth, secure assets, and manage properties efficiently. Our services are tailored to meet the needs of both first-time investors and experienced property owners.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://holgar-homes-kappa.vercel.app/",
+  },
+  {
+    title: "Lead Tutors Academy",
+    image: leadTutors,
+    description: "Experience personalized learning plans designed to help you crush your goals. From Grade 1 to University level, we have the perfect match for you.",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://lead-tutors-academy-ten.vercel.app/",
+  },
   {
     title: "HealthHub – Healthcare System",
     image: healthhub,
     description: "A modern and interactive platform for managing healthcare services, appointments, and patient information.",
     stack: ["React", "Spring Boot", "MongoDB", "CSS"],
     demoUrl: "https://health-care-systems-nine.vercel.app/",
-    codeUrl: "https://github.com/NodStan/HealthCareSystems",
   },
   {
     title: "Estate Flow",
@@ -25,15 +55,6 @@ const projects = [
     description: "EstateFlow is a sleek, modern real-estate web application designed to help users browse, filter, and explore properties with a smooth and intuitive experience.",
     stack: ["React", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://real-estate-ashen-gamma.vercel.app/",
-    codeUrl: "https://github.com/Nodstan/RealEstate.git",
-  },
-  {
-    title: "Cease Fire Tech",
-    image: ceasefiretech,
-    description: "A fire safety platform providing reliable, high-quality firefighting equipment and safety solutions through timely supply, professional installation, and continuous support to keep clients prepared, compliant, and safe.",
-    stack: ["React", "TypeScript", "Tailwind CSS"],
-    demoUrl: "https://ceasefiretech.vercel.app/",
-    codeUrl: "https://github.com/Nodstan/CeaseFireTech.git",
   },
   {
     title: "BuyCom",
@@ -41,39 +62,6 @@ const projects = [
     description: "A modern eCommerce web application built with React, featuring product browsing, dynamic product pages, categories, cart system, responsive UI, and EmailJS-powered newsletter subscription.",
     stack: ["React", "JavaScript", "CSS", "Express.js"],
     demoUrl: "https://buycom-frontend.vercel.app/",
-    codeUrl: "https://github.com/Nodstan/BuyCom.git",
-  },
-  {
-    title: "Facebook Clone",
-    image: Facebook,
-    description: "A social media platform where users can create profiles, share posts, connect with friends, and engage through likes, comments, and messages.",
-    stack: ["HTML", "JavaScript", "CSS"],
-    demoUrl: "https://facetextbook.pages.dev/",
-    codeUrl: "https://github.com/Nodstan/Facebook.git",
-  },
-  {
-    title: "Nutrition Guide",
-    image: springImage,
-    description: "A web application that provides personalized nutrition plans and dietary recommendations.",
-    stack: ["Spring Boot", "MongoDB"],
-    demoUrl: "https://nutritional-guide.onrender.com",
-    codeUrl: "https://github.com/Nodstan/NutritionGuide",
-  },
-  {
-    title: "Mood Tracker",
-    image: springImage,
-    description: "A Spring Boot application for tracking daily mood and overall emotional wellness.",
-    stack: ["Spring Boot", "MongoDB"],
-    demoUrl: "https://mood-tracker-1zvf.onrender.com",
-    codeUrl: "https://github.com/emannnx/Mood-Tracker",
-  },
-  {
-    title: "CryptoDo",
-    image: Home,
-    description: "A modern crypto platform that delivers real-time prices, market insights, secure wallet monitoring, and seamless tracking of all your digital assets.",
-    stack: ["React", "CSS", "Express.js", "JavaScript"],
-    demoUrl: "#", // Coming soon
-    codeUrl: "https://github.com/Nodstan/BuyCom.git",
   }
 ];
 
@@ -118,9 +106,9 @@ export default function Projects() {
                   {project.title}
                 </h3>
                 <div className="flex gap-2">
-                  <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400" title="View Source on GitHub">
+                  {/* <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400" title="View Source on GitHub">
                     <Github size={20} />
-                  </a>
+                  </a> */}
                   <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400" title="View Live Demo">
                     <ExternalLink size={20} />
                   </a>
