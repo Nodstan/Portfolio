@@ -24,9 +24,9 @@ const projects = [
   {
     title: "Tresbontech",
     image: tresbontech,
-    description: "Tresbontech bridges the gap between potential and achievement. Through our Academy and Studio divisions, we deliver world-class education and cutting-edge digital solutions.",
+    description: "Tresbontech Academy offers personalised one-on-one online classes in coding, school subjects, exam preparation, and digital skills — for Nigerian students at home and in the diaspora.",
     stack: ["React", "TypeScript", "Tailwind CSS"],
-    demoUrl: "https://tresbontech.vercel.app/",
+    demoUrl: "https://tresbontech-academy-ruby.vercel.app/",
   },
   {
     title: "Hogar Homes",
