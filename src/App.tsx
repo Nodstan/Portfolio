@@ -10,6 +10,7 @@ import GithubCalendar from './components/GithubCalendar';
 import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import ScrollIndicator from './components/ScrollIndicator';
+import MouseGlow from './components/MouseGlow';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -77,6 +78,7 @@ function Footer() {
 export default function App() {
   return (
     <div className="min-h-screen relative overflow-x-hidden max-w-full selection:bg-emerald-500/20 flex flex-col">
+      <MouseGlow />
       <section
         id="home"
         className="w-full mx-auto max-w-[90rem]"

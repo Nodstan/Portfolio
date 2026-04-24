@@ -10,6 +10,7 @@ import Buycom from "../assets/buycom.png";
 import estateflow from "../assets/estateflow.png";
 import ceasefiretech from "../assets/ceasefiretech.png";
 import tresbontech from "../assets/tresbontech.png"
+import tresbontechacademy from "../assets/tresbontechacademy.png"
 import hogarHomes from "../assets/hogarHomes.png"
 import leadTutors from "../assets/leadTutors.png"
 
@@ -19,21 +20,21 @@ const projects = [
     image: ceasefiretech,
     description: "A fire safety platform providing reliable, high-quality firefighting equipment and safety solutions through timely supply, professional installation, and continuous support to keep clients prepared, compliant, and safe.",
     stack: ["React", "TypeScript", "Tailwind CSS"],
-    demoUrl: "https://www.ceasefiretech.ng/",
+    demoUrl: "https://ceasefiretech.ng/",
   },
   {
     title: "Tresbontech Ltd",
-    image: tresbontech,
+    image: tresbontechacademy,
     description: "Tresbontech Academy offers personalised one-on-one online classes in coding, school subjects, exam preparation, and digital skills — for Nigerian students at home and in the diaspora.",
     stack: ["React", "TypeScript", "Tailwind CSS"],
-    demoUrl: "https://tresbontech-academy-ruby.vercel.app/",
+    demoUrl: "https://tresbontech.com/",
   },
   {
     title: "Tresbontech Academy",
     image: tresbontech,
     description: "Tresbontech Academy offers personalised one-on-one online classes in coding, school subjects, exam preparation, and digital skills — for Nigerian students at home and in the diaspora.",
     stack: ["React", "TypeScript", "Tailwind CSS"],
-    demoUrl: "https://tresbontech-academy-ruby.vercel.app/",
+    demoUrl: "https://tresbontechacademy.com/",
   },
   {
     title: "Hogar Homes",

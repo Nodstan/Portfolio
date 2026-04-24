@@ -1,22 +1,26 @@
 import React from 'react';
-import { Cpu } from 'lucide-react';
+import { Cpu, Code2, Server, Layout, Wrench } from 'lucide-react';
 
 const skillCategories = [
   {
     name: 'Frontend',
-    skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'React-Native', 'Tailwind CSS']
+    icon: <Code2 size={20} />,
+    skills: ['Angular', 'React', 'TypeScript', 'Next.js', 'Tailwind CSS']
   },
   {
     name: 'Backend',
-    skills: ['Node.js', 'Express', 'Python', 'Spring']
+    icon: <Server size={20} />,
+    skills: ['Node.js', 'Express', 'RESTful APIs', 'PostgreSQL', 'MongoDB', 'Authentication (JWT)']
   },
   {
-    name: 'Tools & DevOps',
-    skills: ['Git', 'Docker', 'AWS', 'Kubernetes', 'Jenkins', 'Vite', 'Jira']
+    name: 'Tools & Hosting',
+    icon: <Wrench size={20} />,
+    skills: ['Git & GitHub', 'VPS Hosting (Hostinger)', 'Vercel', 'Postman', 'Vite', 'Docker']
   },
   {
-    name: 'Design & UI',
-    skills: ['Figma', 'Responsive Design', 'Accessibility', 'Motion', 'Prototyping']
+    name: 'Design & UI/UX',
+    icon: <Layout size={20} />,
+    skills: ['Figma', 'Responsive Design', 'Accessibility', 'Clean Code Principles', 'UI Optimization']
   }
 ];
 
@@ -30,10 +34,10 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         {skillCategories.map((category) => (
-          <div key={category.name} className="glass-panel p-5 sm:p-6 rounded-xl">
+          <div key={category.name} className="glass-panel p-5 sm:p-6 rounded-xl border border-slate-800 bg-slate-900/40 hover:bg-slate-900/60 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-300">
-                <Cpu size={20} />
+                {category.icon}
               </span>
               <h3 className="text-lg font-semibold text-slate-50">{category.name}</h3>
             </div>
