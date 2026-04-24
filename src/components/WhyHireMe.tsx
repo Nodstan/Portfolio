@@ -28,6 +28,10 @@ export default function WhyHireMe() {
                 <span className="text-5xl font-extrabold text-[#5EE9B5] mb-2 group-hover:scale-110 transition-transform">10+</span>
                 <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Projects Completed</span>
               </div>
+              <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:bg-slate-800/50 transition-all duration-300 group">
+                <span className="text-5xl font-extrabold text-[#5EE9B5] mb-2 group-hover:scale-110 transition-transform">4</span>
+                <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Fully Deployed Projects</span>
+              </div>
             </div>
           </div>
 
