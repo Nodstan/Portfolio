@@ -56,8 +56,7 @@ export default function Hero() {
 
           <div className="relative flex items-center justify-center order-first md:order-last md:pr-20 lg:pr-32">
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm aspect-square flex items-center justify-center group">
-              <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.7),transparent_55%)] opacity-100" />
-              <div className="relative h-[92%] w-[92%] sm:h-[94%] sm:w-[94%] rounded-full overflow-hidden bg-slate-900 border border-emerald-500/70 shadow-[0_0_35px_rgba(16,185,129,0.7)] transition-transform duration-500 ease-out group-hover:scale-105">
+              <div className="relative h-[92%] w-[92%] sm:h-[94%] sm:w-[94%] rounded-full overflow-hidden bg-slate-900 border border-emerald-500/70 transition-transform duration-500 ease-out group-hover:scale-105">
                 <img
                   src={Image}
                   width="400"

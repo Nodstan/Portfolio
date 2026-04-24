@@ -37,8 +37,6 @@ const techNodes = [
 export default function TechnologyStack() {
   return (
     <section className="relative w-full max-w-full overflow-x-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-500/5 via-transparent to-sky-500/5" />
-
       <div className="relative max-w-6xl mx-auto space-y-10 w-full">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold text-slate-50">
@@ -58,11 +56,11 @@ export default function TechnologyStack() {
                 <div
                   key={node.label}
                   className={
-                    'group relative flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 text-sm text-slate-100 shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_25px_rgba(16,185,129,0.45)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-float group-hover:border-emerald-400/50 ' +
+                    'group relative flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 text-sm text-slate-100 hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-float group-hover:border-emerald-400/50 ' +
                     node.position
                   }
                 >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-950/80 text-emerald-300 border border-emerald-500/50 shadow-[0_0_12px_rgba(16,185,129,0.25)]">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-950/80 text-emerald-300 border border-emerald-500/50">
                     {node.label === 'React' || node.label === 'React Native' ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

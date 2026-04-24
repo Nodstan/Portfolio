@@ -4,13 +4,6 @@ import cvFile from '../assets/CV.pdf';
 export default function WhyHireMe() {
   return (
     <div className="relative w-full max-w-full py-12">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[20%] left-[10%] w-72 h-72 bg-[#5EE9B5] rounded-full mix-blend-multiply filter blur-[96px] opacity-[0.07]"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-72 h-72 bg-[#5EE9B5] rounded-full mix-blend-multiply filter blur-[96px] opacity-[0.07]"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
-      </div>
-
       <div className="relative z-10 flex flex-col items-center">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-16 text-center px-6">
           Why <span className="text-[#5EE9B5]">Hire me?</span>
