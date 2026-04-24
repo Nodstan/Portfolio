@@ -1,13 +1,13 @@
 import React from 'react';
-import cvFile from '../assets/Stanley_Obitunwase_CV.pdf';
+import cvFile from '../assets/CV.pdf';
 
 export default function WhyHireMe() {
   return (
     <div className="relative w-full max-w-full py-12">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[20%] left-[10%] w-72 h-72 bg-[#5EE9B5] rounded-full mix-blend-multiply filter blur-[128px] opacity-10"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-72 h-72 bg-[#5EE9B5] rounded-full mix-blend-multiply filter blur-[128px] opacity-10"></div>
+        <div className="absolute top-[20%] left-[10%] w-72 h-72 bg-[#5EE9B5] rounded-full mix-blend-multiply filter blur-[96px] opacity-[0.07]"></div>
+        <div className="absolute bottom-[20%] right-[10%] w-72 h-72 bg-[#5EE9B5] rounded-full mix-blend-multiply filter blur-[96px] opacity-[0.07]"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
       </div>
 
@@ -25,12 +25,12 @@ export default function WhyHireMe() {
                 <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Years Experience</span>
               </div>
               <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:bg-slate-800/50 transition-all duration-300 group">
-                <span className="text-5xl font-extrabold text-[#5EE9B5] mb-2 group-hover:scale-110 transition-transform">10+</span>
-                <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Projects Completed</span>
-              </div>
-              <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:bg-slate-800/50 transition-all duration-300 group">
                 <span className="text-5xl font-extrabold text-[#5EE9B5] mb-2 group-hover:scale-110 transition-transform">4</span>
                 <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Fully Deployed Projects</span>
+              </div>
+              <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:bg-slate-800/50 transition-all duration-300 group">
+                <span className="text-5xl font-extrabold text-[#5EE9B5] mb-2 group-hover:scale-110 transition-transform">10+</span>
+                <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Projects Completed</span>
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function MouseGlow() {
       className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
       style={{
         opacity,
-        background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(34, 197, 94, 0.15), transparent 80%)`,
+        background: `radial-gradient(350px circle at ${position.x}px ${position.y}px, rgba(34, 197, 94, 0.15), transparent 80%)`,
       }}
     />
   );

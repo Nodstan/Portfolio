@@ -58,11 +58,11 @@ export default function TechnologyStack() {
                 <div
                   key={node.label}
                   className={
-                    'group relative flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 text-sm text-slate-100 shadow-[0_0_20px_rgba(16,185,129,0.25)] hover:shadow-[0_0_35px_rgba(16,185,129,0.6)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-float group-hover:border-emerald-400/50 ' +
+                    'group relative flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 text-sm text-slate-100 shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_25px_rgba(16,185,129,0.45)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 animate-float group-hover:border-emerald-400/50 ' +
                     node.position
                   }
                 >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-950/80 text-emerald-300 border border-emerald-500/50 shadow-[0_0_18px_rgba(16,185,129,0.35)]">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-950/80 text-emerald-300 border border-emerald-500/50 shadow-[0_0_12px_rgba(16,185,129,0.25)]">
                     {node.label === 'React' || node.label === 'React Native' ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

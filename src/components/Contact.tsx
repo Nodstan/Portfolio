@@ -36,7 +36,7 @@ export default function Contact() {
           Get In <span className="text-emerald-400">Touch</span>
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto">
-          Have a project in mind or need a reliable frontend developer? Let&apos;s build something great together.
+          Have a project in mind or need a reliable software engineer? Let&apos;s build something great together.
         </p>
       </div>
 

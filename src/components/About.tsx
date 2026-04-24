@@ -12,7 +12,7 @@ export default function About() {
         <div className="flex flex-col gap-8">
           <div className="space-y-6 text-slate-300 leading-relaxed text-base sm:text-lg">
             <p>
-              Hello! I'm <strong>Stanley Obitunwase</strong>, a Full-Stack Developer driven by the challenge of building scalable applications from the ground up. My journey in tech started with a curiosity for how the web works, which has since turned into a professional mission to combine <strong>clean code</strong> with high-performance, user-centric functionality.
+              Hello! I'm <strong>Stanley Obitunwase</strong>, a Full-Stack Software Engineer driven by the challenge of building scalable applications from the ground up. My journey in tech started with a curiosity for how the web works, which has since turned into a professional mission to combine <strong>clean code</strong> with high-performance, user-centric functionality.
             </p>
 
             <p>
@@ -20,7 +20,7 @@ export default function About() {
               <span className="text-emerald-400 font-medium"> React</span>, 
               <span className="text-emerald-400 font-medium"> Angular</span>, and 
               <span className="text-emerald-400 font-medium"> Node.js/Express</span>. 
-              As a developer, I thrive at the intersection of logic and layout. Whether I’m architecting secure RESTful APIs or crafting responsive interfaces with 
+              As a software engineer, I thrive at the intersection of logic and layout. Whether I’m architecting secure RESTful APIs or crafting responsive interfaces with 
               <span className="text-emerald-400 font-medium"> Tailwind CSS</span>, my goal is always to build systems that are as maintainable as they are powerful.
             </p>
 
