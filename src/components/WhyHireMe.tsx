@@ -1,6 +1,5 @@
 import React from 'react';
-import profileImage from '../assets/port.jpg';
-// import Image from '../assets/Nodstan.jpeg'
+import cvFile from '../assets/Stanley_Obitunwase_CV.pdf';
 
 export default function WhyHireMe() {
   return (
@@ -18,23 +17,16 @@ export default function WhyHireMe() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
-          {/* Left Side: Profile Picture */}
+          {/* Left Side: Stats (Replaced Image) */}
           <div className="flex justify-center items-center relative w-full py-8 md:py-0 md:pl-20 lg:pl-32">
-            <div className="relative w-[55%] max-w-[14rem] sm:max-w-[18rem] md:max-w-[24rem] aspect-square">
-              {/* Glow effect */}
-              <div className="absolute inset-[-40%] rounded-full bg-[radial-gradient(circle_at_center,rgba(94,233,181,0.25),transparent_70%)] animate-pulse"></div>
-              
-              {/* Dual ring border */}
-              <div className="absolute inset-[-10%] rounded-full border border-[#5EE9B5]/30"></div>
-              <div className="absolute inset-[-20%] rounded-full border border-[#5EE9B5]/10"></div>
-              
-              {/* Image container */}
-              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-[#5EE9B5]/50 bg-slate-900">
-                <img 
-                  src={profileImage} 
-                  alt="Stanley Obitunwase" 
-                  className="w-full h-full object-cover"
-                />
+            <div className="grid grid-cols-1 gap-6 w-full max-w-md">
+              <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:bg-slate-800/50 transition-all duration-300 group">
+                <span className="text-5xl font-extrabold text-[#5EE9B5] mb-2 group-hover:scale-110 transition-transform">3+</span>
+                <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Years Experience</span>
+              </div>
+              <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center hover:bg-slate-800/50 transition-all duration-300 group">
+                <span className="text-5xl font-extrabold text-[#5EE9B5] mb-2 group-hover:scale-110 transition-transform">10+</span>
+                <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">Projects Completed</span>
               </div>
             </div>
           </div>
@@ -45,25 +37,15 @@ export default function WhyHireMe() {
               With 3 years of experience in full-stack development and a proven track record of creating fully deployed, scalable web applications, I bring a strong blend of technical expertise and leadership skills. I am passionate about architecting robust systems and delivering exceptional digital solutions that consistently exceed client expectations and drive real business value.
             </p>
 
-            {/* Stat Cards */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-slate-800/80 transition-colors">
-                <span className="text-4xl font-bold text-slate-50 mb-2">3+</span>
-                <span className="text-sm text-slate-400 font-medium uppercase tracking-wider">Years Experience</span>
-              </div>
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-slate-800/80 transition-colors">
-                <span className="text-4xl font-bold text-slate-50 mb-2">10+</span>
-                <span className="text-sm text-slate-400 font-medium uppercase tracking-wider">Projects Completed</span>
-              </div>
-            </div>
-
             {/* CTA Button */}
             <div className="pt-4 flex justify-start">
               <a 
-                href="#contact" 
+                href={cvFile}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#5EE9B5] text-slate-900 font-bold rounded-full hover:bg-[#4ade80] hover:shadow-[0_0_20px_rgba(94,233,181,0.4)] transition-all duration-300 transform hover:-translate-y-1"
               >
-                Hire me
+                Download CV
               </a>
             </div>
           </div>
