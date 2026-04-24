@@ -1,120 +1,76 @@
 import React from 'react';
-import { Award, ExternalLink, Calendar, GraduationCap } from 'lucide-react';
+import { Calendar, GraduationCap, Briefcase, ExternalLink } from 'lucide-react';
 
-const education = [
+const timelineData = [
   {
-    institution: "NIIT",
-    degree: "Application Development, Web Development & Database Management",
+    type: 'education',
+    title: "Application Development, Web Development & Database Management",
+    subtitle: "NIIT",
     date: "2023 – Present",
-    highlight:
-      "Hands-on training building cross-platform mobile apps, responsive web applications, and managing relational and NoSQL databases."
-  }
-];
-
-const certificates = [
-  {
-    name: "Angular Course",
-    issuer: "Udemy",
-    date: "In progress",
-    url: "#",
-    id: "UDEMY-ANGULAR-COURSE"
+    details: [
+      "Hands-on training building cross-platform mobile apps and responsive web applications.",
+      "Expertise in managing relational and NoSQL databases."
+    ]
   },
   {
-    name: "Jira Course",
-    issuer: "Udemy",
-    date: "In progress",
-    url: "#",
-    id: "UDEMY-JIRA-COURSE"
+    type: 'experience',
+    title: "Full-Stack Developer Intern",
+    subtitle: "Tresbontech LTD",
+    date: "2026 – Present",
+    details: [
+      "Spearheading UI/UX refactoring for web platforms, focusing on navigation and minimalist design.",
+      "Implementing scalable front-end solutions using modern frameworks."
+    ]
   }
 ];
 
 export default function Certificates() {
   return (
-    <div className="space-y-12 w-full max-w-full">
-      <div className="flex flex-col gap-4">
-        <h2 className="text-3xl font-bold text-slate-50">Education & Certifications</h2>
-        <div className="h-1 w-20 bg-emerald-500 rounded-full"></div>
+    <div className="w-full px-4 py-12">
+      <div className="flex flex-col gap-4 mb-12">
+        <h2 className="text-4xl font-bold text-slate-50 tracking-tight">Education & Experience</h2>
+        <div className="h-1.5 w-24 bg-emerald-500 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-full">
-        <div className="space-y-6 w-full">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-300">
-              <GraduationCap size={20} />
-            </span>
-            <h3 className="text-lg font-semibold text-slate-50">Education</h3>
-          </div>
+      <div className="relative border-l-2 border-slate-800 ml-3 space-y-10">
+        {timelineData.map((item, index) => (
+          <div key={index} className="relative pl-8 group">
+            {/* Timeline Dot */}
+            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-slate-950 shadow-[0_0_10px_rgba(16,185,129,0.8)] group-hover:scale-125 transition-transform duration-200"></div>
 
-          {education.map((edu) => (
-            <div
-              key={`${edu.institution}-${edu.degree}`}
-              className="glass-panel p-5 sm:p-6 rounded-xl border border-slate-800 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-200 w-full"
-            >
-              <h4 className="text-base font-semibold text-slate-50 mb-1">
-                {edu.degree}
-              </h4>
-              <p className="text-sm text-slate-400 mb-2">
-                {edu.institution}
-              </p>
-              <div className="flex items-center gap-2 text-xs text-slate-500 mb-3">
-                <Calendar size={12} />
-                <span>{edu.date}</span>
+            <div className="glass-panel p-6 rounded-2xl border border-slate-800 bg-slate-900/40 hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    {item.type === 'education' ? (
+                      <GraduationCap size={18} className="text-emerald-400" />
+                    ) : (
+                      <Briefcase size={18} className="text-emerald-400" />
+                    )}
+                    <h3 className="text-xl font-bold text-slate-50 group-hover:text-emerald-400 transition-colors">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-emerald-400 font-medium">{item.subtitle}</p>
+                </div>
+                
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 text-slate-400 text-xs font-medium border border-slate-700/50">
+                  <Calendar size={14} />
+                  <span>{item.date}</span>
+                </div>
               </div>
-              <ul className="text-sm text-slate-400 list-disc list-inside space-y-1">
-                <li>{edu.highlight}</li>
+
+              <ul className="space-y-3">
+                {item.details.map((detail, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-slate-400 text-sm leading-relaxed">
+                    <span className="text-emerald-500 mt-1">→</span>
+                    {detail}
+                  </li>
+                ))}
               </ul>
             </div>
-          ))}
-        </div>
-
-        <div className="space-y-6 w-full">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-300">
-              <Award size={20} />
-            </span>
-            <h3 className="text-lg font-semibold text-slate-50">Certifications</h3>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 w-full">
-            {certificates.map((cert) => (
-              <div
-                key={cert.id}
-                className="glass-panel p-5 sm:p-6 rounded-xl group border border-slate-800 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-200 w-full"
-              >
-                <div className="flex items-start justify-between gap-4 mb-3">
-                  <div className="flex gap-4">
-                    <div className="p-3 rounded-lg bg-emerald-500/10 text-emerald-300 group-hover:bg-emerald-500/20 transition-colors">
-                      <Award size={24} />
-                    </div>
-                    <div>
-                      <h4 className="text-base font-semibold text-slate-50 leading-tight mb-1 group-hover:text-emerald-300 transition-colors">
-                        {cert.name}
-                      </h4>
-                      <p className="text-slate-400 text-sm mb-2">
-                        {cert.issuer}
-                      </p>
-                      <div className="flex items-center gap-2 text-xs text-slate-500">
-                        <Calendar size={12} />
-                        <span>Issued {cert.date}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <a
-                  href={cert.url}
-                  className="inline-flex items-center gap-1 text-xs font-medium text-emerald-300 hover:text-emerald-200 transition-colors"
-                  title="View Credential"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>View Credential</span>
-                  <ExternalLink size={14} />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
