@@ -70,7 +70,7 @@ export default function Hero() {
               {/* Location Badge */}
               <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 bg-[#020617]/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-slate-800/80 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2">
                 <span className="text-sm filter drop-shadow-sm">📍</span>
-                <span className="text-xs sm:text-sm font-bold tracking-wide text-sky-400 whitespace-nowrap">
+                <span className="text-xs sm:text-sm font-bold tracking-wide text-emerald-400 whitespace-nowrap">
                   Lagos, Nigeria
                 </span>
               </div>
