@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import profileImage from '../assets/port.jpg';
-import Image from '../assets/Nodstan.jpeg'
+import Image from '../assets/Nodstan.jpeg';
+import { LINKEDIN_URL, GITHUB_URL, EMAIL } from '../constants';
 
 export default function Hero() {
   return (
@@ -27,7 +28,7 @@ export default function Hero() {
 
             <div className="flex items-center justify-center md:justify-start gap-4">
               <a
-                href="https://github.com/NodStan"
+                href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full border border-slate-600/60 text-slate-300 hover:text-emerald-300 hover:border-emerald-400 transition-colors"
@@ -36,7 +37,7 @@ export default function Hero() {
                 <FaGithub size={22} />
               </a>
               <a
-                href="https://www.linkedin.com/in/stanley-obitunwase/"
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full border border-slate-600/60 text-slate-300 hover:text-emerald-300 hover:border-emerald-400 transition-colors"
@@ -45,7 +46,7 @@ export default function Hero() {
                 <FaLinkedin size={22} />
               </a>
               <a
-                href="mailto:stanleyobitunwase@gmail.com"
+                href={`mailto:${EMAIL}`}
                 className="p-2 rounded-full border border-slate-600/60 text-slate-300 hover:text-emerald-300 hover:border-emerald-400 transition-colors"
                 aria-label="Email"
               >

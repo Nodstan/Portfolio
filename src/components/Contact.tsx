@@ -9,19 +9,36 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError('');
+
+    try {
+      const formId = import.meta.env.VITE_FORMSPREE_FORM_ID;
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message. Please try again.');
+      }
+
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-      
-      setTimeout(() => setSubmitted(false), 3000);
-    }, 1500);
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -45,7 +62,7 @@ export default function Contact() {
           <div className="space-y-3">
             <h3 className="text-2xl font-semibold text-slate-50">Let&apos;s Work Together</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              I collaborate with brands, startups, and agencies to design and build modern, performant web experiences. 
+              I collaborate with brands, startups, and agencies to design and build modern, performant web experiences.
               Share a bit about your idea, and I&apos;ll get back to you with how we can bring it to life.
             </p>
           </div>
@@ -88,9 +105,9 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-xs font-medium text-slate-300">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
+                <input
+                  type="text"
+                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -101,9 +118,9 @@ export default function Contact() {
               </div>
               <div className="space-y-2">
                 <label htmlFor="email" className="text-xs font-medium text-slate-300">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
+                <input
+                  type="email"
+                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -113,11 +130,11 @@ export default function Contact() {
                 />
               </div>
             </div>
-            
+
             <div className="space-y-2">
               <label htmlFor="message" className="text-xs font-medium text-slate-300">Project details</label>
-              <textarea 
-                id="message" 
+              <textarea
+                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
@@ -128,8 +145,8 @@ export default function Contact() {
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={isSubmitting}
               className="inline-flex items-center justify-center gap-2 w-full bg-emerald-500 text-slate-950 text-sm font-medium py-3 px-6 rounded-lg hover:bg-emerald-400 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 focus:ring-offset-slate-950 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_20px_40px_rgba(16,185,129,0.4)]"
             >
@@ -142,10 +159,16 @@ export default function Contact() {
                 'Send Message'
               )}
             </button>
-            
+
             {submitted && (
               <div className="p-3 bg-emerald-500/10 border border-emerald-500/40 rounded-lg text-emerald-300 text-xs text-center">
-                Message sent successfully!
+                Message sent successfully! I&apos;ll get back to you soon.
+              </div>
+            )}
+
+            {error && (
+              <div className="p-3 bg-red-500/10 border border-red-500/40 rounded-lg text-red-300 text-xs text-center">
+                {error}
               </div>
             )}
           </form>

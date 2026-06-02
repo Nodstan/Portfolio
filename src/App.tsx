@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import ErrorBoundary from './components/ErrorBoundary';
+import { LINKEDIN_URL, GITHUB_URL } from './constants';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -41,7 +43,7 @@ function Footer() {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com/NodStan"
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-slate-500 hover:text-emerald-300 transition-colors"
@@ -50,7 +52,7 @@ function Footer() {
               <FaGithub size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/in/stanley-obitunwase-a11668308/"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-slate-500 hover:text-emerald-300 transition-colors"
@@ -76,6 +78,7 @@ function Footer() {
 
 export default function App() {
   return (
+    <ErrorBoundary>
     <div className="min-h-screen relative overflow-x-hidden max-w-full selection:bg-emerald-500/20 flex flex-col">
       <section
         id="home"
@@ -147,5 +150,6 @@ export default function App() {
 
       <Footer />
     </div>
+    </ErrorBoundary>
   );
 }
