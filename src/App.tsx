@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ErrorBoundary from './components/ErrorBoundary';
 import { LINKEDIN_URL, GITHUB_URL } from './constants';
 import Hero from './components/Hero';
@@ -60,15 +60,6 @@ function Footer() {
             >
               <FaLinkedin size={18} />
             </a>
-            {/* <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-slate-500 hover:text-emerald-300 transition-colors"
-              aria-label="Twitter / X"
-            >
-              <FaTwitter size={18} />
-            </a> */}
           </div>
         </nav>
       </div>
@@ -79,77 +70,77 @@ function Footer() {
 export default function App() {
   return (
     <ErrorBoundary>
-    <div className="min-h-screen relative overflow-x-hidden max-w-full selection:bg-emerald-500/20 flex flex-col">
-      <section
-        id="home"
-        className="w-full mx-auto max-w-[90rem]"
-      >
-        <Hero />
-      </section>
-
-      <main className="relative z-10 px-0 space-y-20 md:space-y-32 pb-32 flex-1 w-full max-w-full">
-
+      <div className="min-h-screen relative overflow-x-hidden max-w-full selection:bg-emerald-500/20 flex flex-col">
         <section
-          id="about"
-          className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          id="home"
+          className="w-full mx-auto max-w-[90rem]"
         >
-          <About />
+          <Hero />
         </section>
 
-        <section
-          id="projects"
-          className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
-        >
-          <Projects />
-        </section>
+        <main className="relative z-10 px-0 space-y-20 md:space-y-32 pb-32 flex-1 w-full max-w-full">
 
-        <section
-          id="skills"
-          className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
-        >
-          <Skills />
-        </section>
+          <section
+            id="about"
+            className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          >
+            <About />
+          </section>
 
-        <section
-          id="tech-stack"
-          className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
-        >
-          <TechnologyStack />
-        </section>
+          <section
+            id="projects"
+            className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          >
+            <Projects />
+          </section>
 
-        <section
-          id="activity"
-          className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
-        >
-          <GithubCalendar />
-        </section>
+          <section
+            id="skills"
+            className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          >
+            <Skills />
+          </section>
 
-        <section
-          id="certificates"
-          className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
-        >
-          <Certificates />
-        </section>
+          <section
+            id="tech-stack"
+            className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          >
+            <TechnologyStack />
+          </section>
 
-        <section
-          id="why-hire-me"
-          className="scroll-mt-28 w-full mx-auto max-w-[90rem]"
-        >
-          <WhyHireMe />
-        </section>
+          <section
+            id="activity"
+            className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          >
+            <GithubCalendar />
+          </section>
 
-        <section
-          id="contact"
-          className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
-        >
-          <Contact />
-        </section>
-      </main>
+          <section
+            id="certificates"
+            className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          >
+            <Certificates />
+          </section>
 
-      <ScrollIndicator />
+          <section
+            id="why-hire-me"
+            className="scroll-mt-28 w-full mx-auto max-w-[90rem]"
+          >
+            <WhyHireMe />
+          </section>
 
-      <Footer />
-    </div>
+          <section
+            id="contact"
+            className="scroll-mt-28 w-full px-6 md:px-20 lg:px-32 mx-auto max-w-[90rem]"
+          >
+            <Contact />
+          </section>
+        </main>
+
+        <ScrollIndicator />
+
+        <Footer />
+      </div>
     </ErrorBoundary>
   );
 }

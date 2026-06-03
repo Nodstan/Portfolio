@@ -14,12 +14,12 @@ const timelineData = [
   },
   {
     type: 'experience',
-    title: "Full-Stack Software Engineer(Intern)", //
-    subtitle: "Tresbontech LTD", //
-    date: "2026 – Present",
+    title: "Full-Stack Software Engineer (Intern)",
+    subtitle: "Tresbontech LTD",
+    date: "Feb 2026 – Present",
     details: [
-      "Spearheading UI/UX refactoring for web platforms, including navigation restructuring and minimalist header redesigns.", //
-      "Implementing scalable front-end solutions using modern frameworks to enhance user experience."
+      "Built and shipped 5 client-facing production websites using React, TypeScript, and Tailwind CSS, all of which remain live and actively used.",
+      "Refactored navigation and header components across two platforms, reducing DOM nesting depth and improving layout consistency across breakpoints."
     ]
   }
 ];

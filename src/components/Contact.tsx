@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Loader2, Mail, Phone, MapPin } from 'lucide-react';
 
+const UNCONFIGURED = 'your_form_id_here';
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,8 +18,15 @@ export default function Contact() {
     setIsSubmitting(true);
     setError('');
 
+    const formId = import.meta.env.VITE_FORMSPREE_ID;
+
+    if (!formId || formId === UNCONFIGURED) {
+      setError('Contact form is not configured yet. Please email me directly at stanleyobitunwase@gmail.com');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      const formId = import.meta.env.VITE_FORMSPREE_FORM_ID;
       const response = await fetch(`https://formspree.io/f/${formId}`, {
         method: 'POST',
         headers: {
@@ -84,7 +93,12 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-wide text-slate-500">Phone</p>
-                <p className="text-sm text-slate-100">+234 814 169 1876</p>
+                <a
+                  href="tel:+2348141691876"
+                  className="text-sm text-slate-100 hover:text-emerald-300 transition-colors"
+                >
+                  +234 814 169 1876
+                </a>
               </div>
             </div>
 

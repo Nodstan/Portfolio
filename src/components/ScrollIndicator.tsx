@@ -9,6 +9,7 @@ const sectionOrder = [
   'tech-stack',
   'activity',
   'certificates',
+  'why-hire-me',
   'contact',
 ];
 
@@ -29,7 +30,7 @@ export default function ScrollIndicator() {
         });
 
         if (bestEntry) {
-          setActiveSection(bestEntry.id);
+          setActiveSection((bestEntry as Element).id);
         }
       },
       { threshold: [0.35, 0.5, 0.75] }

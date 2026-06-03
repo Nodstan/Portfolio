@@ -4,7 +4,6 @@ import {
   Boxes,
   Cpu,
   Server,
-  Cloud,
   Hexagon,
   Container,
 } from 'lucide-react';
@@ -23,14 +22,12 @@ const techNodes = [
   // Right loop of the infinity shape
   { label: 'Java', icon: Cpu, position: 'md:absolute md:top-[18%] md:right-[28%]' },
   { label: 'TypeScript', icon: Code2, position: 'md:absolute md:top-[30%] md:right-[16%]' },
-  { label: 'AWS', icon: Cloud, position: 'md:absolute md:top-[45%] md:right-[10%]' },
+  { label: 'Next.js', icon: Code2, position: 'md:absolute md:top-[45%] md:right-[10%]' },
   { label: 'MongoDB', icon: Server, position: 'md:absolute md:top-[60%] md:right-[18%]' },
-  { label: 'Kubernetes', icon: Boxes, position: 'md:absolute md:top-[72%] md:right-[30%]' },
 
   // Center crossover of the infinity shape
   { label: 'Docker', icon: Container, position: 'md:absolute md:top-[50%] md:left-1/2 md:-translate-x-1/2' },
   { label: 'Jira', icon: Hexagon, position: 'md:absolute md:top-[38%] md:left-1/2 md:-translate-x-1/2' },
-  { label: 'Jenkins', icon: Cpu, position: 'md:absolute md:top-[62%] md:left-1/2 md:-translate-x-1/2' },
   { label: 'Koyeb', icon: Cpu, position: 'md:absolute md:top-[26%] md:left-1/2 md:-translate-x-1/2' },
 ];
 
@@ -43,8 +40,8 @@ export default function TechnologyStack() {
             Technology <span className="text-emerald-400">Stack</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto">
-            A snapshot of the technologies I use to design, build, and ship robust, scalable web
-            applications across the full stack.
+            Full ecosystem view — the complete set of technologies I reach for across frontend,
+            backend, databases, and tooling when building and shipping production applications.
           </p>
         </div>
 
@@ -136,6 +133,10 @@ export default function TechnologyStack() {
                     ) : node.label === 'TypeScript' ? (
                       <span className="text-blue-500 font-bold text-sm group-hover:scale-110 transition-transform duration-300">
                         TS
+                      </span>
+                    ) : node.label === 'Next.js' ? (
+                      <span className="text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300 tracking-tight">
+                        N▲
                       </span>
                     ) : node.label === 'MongoDB' ? (
                       <svg

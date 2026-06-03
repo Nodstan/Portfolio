@@ -16,35 +16,35 @@ export default function About() {
             </p>
 
             <p>
-              I specialize in the JavaScript and TypeScript ecosystems, with a deep focus on 
-              <span className="text-emerald-400 font-medium"> React</span>, 
-              <span className="text-emerald-400 font-medium"> Angular</span>, and 
-              <span className="text-emerald-400 font-medium"> Node.js/Express</span>. 
-              As a software engineer, I thrive at the intersection of logic and layout. Whether I’m architecting secure RESTful APIs or crafting responsive interfaces with 
+              I specialize in the JavaScript and TypeScript ecosystems, with a deep focus on
+              <span className="text-emerald-400 font-medium"> React</span>,
+              <span className="text-emerald-400 font-medium"> Angular</span>, and
+              <span className="text-emerald-400 font-medium"> Node.js/Express</span>.
+              As a software engineer, I thrive at the intersection of logic and layout. Whether I'm architecting secure RESTful APIs or crafting responsive interfaces with
               <span className="text-emerald-400 font-medium"> Tailwind CSS</span>, my goal is always to build systems that are as maintainable as they are powerful.
             </p>
 
             <p>
-              I am a strong advocate for <strong>Clean Code principles</strong> and the "Boy Scout Rule"—leaving every codebase better than I found it. When I'm not in my IDE, I'm usually exploring AI-driven workflows to speed up development, contributing to open-source, or sharing insights with the dev community to help us all build better software.
+              I am a strong advocate for <strong>Clean Code principles</strong> and the "Boy Scout Rule" — leaving every codebase better than I found it. When I'm not in my IDE, I'm usually exploring AI-driven workflows to speed up development, contributing to open-source, or sharing insights with the dev community. I'm currently building <strong>MedTales</strong>, a mobile health app in React Native, expanding my work beyond the web.
+            </p>
+
+            <p className="text-sm sm:text-base border-l-2 border-emerald-500 pl-4 text-slate-400 italic">
+              Currently open to full-stack software engineering roles at product companies and startups.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-slate-800 pb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-slate-800 pb-4">
             <div className="p-4 rounded-lg bg-slate-900/60 text-center hover:bg-slate-900 transition-colors border border-slate-800">
               <div className="text-2xl sm:text-3xl font-bold text-slate-50 mb-1">3+</div>
               <div className="text-xs sm:text-sm text-slate-400">Years Experience</div>
             </div>
             <div className="p-4 rounded-lg bg-slate-900/60 text-center hover:bg-slate-900 transition-colors border border-slate-800">
-              <div className="text-2xl sm:text-3xl font-bold text-slate-50 mb-1">4</div>
-              <div className="text-xs sm:text-sm text-slate-400">Deployed Projects</div>
+              <div className="text-2xl sm:text-3xl font-bold text-slate-50 mb-1">8</div>
+              <div className="text-xs sm:text-sm text-slate-400">Live Projects</div>
             </div>
             <div className="p-4 rounded-lg bg-slate-900/60 text-center hover:bg-slate-900 transition-colors border border-slate-800">
               <div className="text-2xl sm:text-3xl font-bold text-slate-50 mb-1">20+</div>
               <div className="text-xs sm:text-sm text-slate-400">Open Source Contribs</div>
-            </div>
-            <div className="p-4 rounded-lg bg-slate-900/60 text-center hover:bg-slate-900 transition-colors border border-slate-800">
-              <div className="text-2xl sm:text-3xl font-bold text-slate-50 mb-1">100%</div>
-              <div className="text-xs sm:text-sm text-slate-400">Client Satisfaction</div>
             </div>
           </div>
         </div>

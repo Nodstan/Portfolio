@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import profileImage from '../assets/port.jpg';
 import Image from '../assets/Nodstan.jpeg';
+import cvFile from '../assets/CV.pdf';
 import { LINKEDIN_URL, GITHUB_URL, EMAIL } from '../constants';
 
 export default function Hero() {
@@ -25,6 +25,15 @@ export default function Hero() {
               in full-stack development. Focused on building scalable applications that bridge the gap
               between cutting-edge technology and exceptional user experience.
             </p>
+
+            <a
+              href={cvFile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-8 inline-flex items-center justify-center px-6 py-3 bg-emerald-500 text-slate-950 text-sm font-semibold rounded-full hover:bg-emerald-400 transition-all duration-200 shadow-[0_4px_20px_rgba(16,185,129,0.35)] hover:-translate-y-0.5"
+            >
+              Download CV
+            </a>
 
             <div className="flex items-center justify-center md:justify-start gap-4">
               <a

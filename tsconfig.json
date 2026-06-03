@@ -16,6 +16,7 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "allowJs": true,
+    "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
       "@/*": [
